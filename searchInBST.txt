@@ -1,0 +1,14 @@
+public class Solution {
+	public static BinaryTreeNode<Integer> searchInBST(BinaryTreeNode<Integer> root , int k){
+        if(root == null){
+            return null;
+        }
+        if(root.data == k){
+            return root;
+        }
+        if(k < root.data){
+            return searchInBST(root.left,k);
+        }
+        return searchInBST(root.right,k);
+	}
+}
